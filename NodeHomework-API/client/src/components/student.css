@@ -1,0 +1,23 @@
+.student {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 240px;
+  margin: 16px;
+  float: left;
+}
+.student h1 {
+  padding: 5px;
+  color: #fff;
+  font-size: 1.1em;
+  margin-bottom: 6px;
+  background-color: #2c3e50;
+  border-radius: 5px;
+}
+.student p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
