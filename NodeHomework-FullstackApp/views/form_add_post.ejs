@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogpost - Add New</title>
+</head>
+<body>
+    <h1>Add new blogpost</h1>
+    <form method="POST" action="/post/add">
+        <label for="blogpost_title">Blogpost Title</label>
+        <input type="text" id="blogpost_title" name="title" placeholder="Blogpost Title" required>
+        <br><br>
+        <label for="blogpost_content">Blogpost content</label>
+        <textarea name="content" id="blogpost_content" cols="30" rows="10" placeholder="Blogpost content" required></textarea>
+        <br><br>
+        <button type="submit">Save Blogpost</button>
+    </form>
+</body>
+</html>

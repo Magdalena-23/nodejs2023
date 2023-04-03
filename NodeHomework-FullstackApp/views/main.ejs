@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog - Welcome</title>
+  </head>
+  <body>
+    <header>
+      <h1>My awesome Node.js Blog site</h1>
+      <a href="/form_add_post">Add new blogpost</a>
+    </header>
+    <% data.forEach(post => { %>
+    <article>
+      <h2><%= post.title %></h2>
+      <div><%= post.content %></div>
+      <br />
+      <span><%= post.publish_date %></span>
+      <a href="/form_edit_post/<%=post._id%>">Edit Blogpost</a>
+      <a href="/<%=post._id%>">Delete Post</a>
+      <a href="/singlepost/<%=post._id%>">View Post</a>
+    </article>
+    <br />
+    <hr />
+    <% }) %>
+  </body>
+</html>
