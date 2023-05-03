@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css" />
+  </head>
+  <body>
+    <section>
+      <div class="form-box">
+        <div class="form-value">
+          <form action="/sign-up" method="POST">
+            <h2>Register</h2>
+            <div class="inputbox">
+              <ion-icon name="mail-outline"></ion-icon>
+              <input
+                type="text"
+                required
+                name="email"
+                value="<%= formData.email %>"
+                oninput="removeErrorMessage(this)"
+              />
+              <label for="email">Email</label>
+              <% if (errors && errors.email) { %>
+              <p class="error-message"><%= errors.email %></p>
+              <% } %>
+            </div>
+            <div class="inputbox">
+              <ion-icon name="lock-closed-outline"></ion-icon>
+              <input
+                type="password"
+                required
+                name="password"
+                value="<%= formData.password %>"
+                oninput="removeErrorMessage(this)"
+              />
+              <label for="password">Password</label>
+              <% if (errors && errors.password) { %>
+              <p class="error-message"><%= errors.password %></p>
+              <% } %>
+            </div>
+            <div class="inputbox">
+              <ion-icon name="lock-closed-outline"></ion-icon>
+              <input
+                type="password"
+                required
+                name="confirm_password"
+                value="<%= formData.confirm_password %>"
+                oninput="removeErrorMessage(this)"
+              />
+              <label for="confirm-password">Confirm Password</label>
+              <% if (errors && errors.confirm_password) { %>
+              <p class="error-message"><%= errors.confirm_password %></p>
+              <% } %>
+            </div>
+            <button>Register</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script src="/script.js"></script>
+  </body>
+</html>
